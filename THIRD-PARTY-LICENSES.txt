@@ -1,8 +1,8 @@
 # THIRD PARTY LICENSES
 VideoCutterStudio - Third Party Open Source Licenses
 
-適用バージョン: v0.1.0 以降
-最終更新: 2026-08-31 (v1.0)
+適用バージョン: v0.6 以降 (Tkinter版)
+最終更新: 2026-08-31 (v0.6)
 ライセンス: VideoCutterStudio License (LICENSE.md)
 
 本ファイルは VideoCutterStudio が使用している第三者ライブラリ・バイナリのライセンス情報を記載しています。
@@ -10,30 +10,22 @@ VideoCutterStudio - Third Party Open Source Licenses
 
 ### 1. FFmpeg - LGPL-2.1-or-later / GPL-2.0-or-later (ビルドにより異なる)
 
-- Binary: ffmpeg / ffprobe (LGPLビルドを使用)
+- Binary: ffmpeg / ffprobe (imageio-ffmpeg経由のLGPLビルドを使用)
 - Copyright: FFmpeg team
 - Source: https://ffmpeg.org/
-- 用途: 動画のデコード、カット、エンコード、サムネイル生成の中核エンジン
+- 用途: 動画のデコード、カット、エンコード、音声抽出の中核エンジン
 - 本配布物ではLGPLビルドを採用し、動的リンクとして利用しています。LGPLのソース開示義務に従い、ビルドに使用したFFmpegのソース取得方法をREADMEに記載しています。
 - ライセンス全文: LICENSES/FFmpeg-LGPL-2.1.txt
 
-### 2. customtkinter - MIT License
-
-- Package: customtkinter >=5.2.0
-- Copyright: Tom Schimansky
-- Source: https://github.com/TomSchimansky/CustomTkinter
-- 用途: モダンなUIフレームワーク
-- ライセンス全文: LICENSES/customtkinter-MIT.txt
-
-### 3. Pillow (PIL Fork) - HPND
+### 2. Pillow (PIL Fork) - HPND
 
 - Package: Pillow >=10.0
 - Copyright: Alex Clark and contributors
 - Source: https://github.com/python-pillow/Pillow
-- 用途: サムネイル生成、画像処理
+- 用途: サムネイル生成、画像処理、プレビュー描画
 - ライセンス全文: LICENSES/Pillow-HPND.txt
 
-### 4. imageio-ffmpeg - BSD-2-Clause
+### 3. imageio-ffmpeg - BSD-2-Clause
 
 - Package: imageio-ffmpeg >=0.4.9
 - Copyright: imageio contributors
@@ -41,33 +33,44 @@ VideoCutterStudio - Third Party Open Source Licenses
 - 用途: FFmpegバイナリの取得・管理
 - ライセンス全文: LICENSES/imageio-ffmpeg-BSD-2-Clause.txt
 
-### 5. OpenCV (opencv-python) - Apache-2.0
+### 4. OpenCV (opencv-python) - Apache-2.0
 
 - Package: opencv-python >=4.8.0
 - Copyright: OpenCV team
 - Source: https://github.com/opencv/opencv
-- 用途: フレーム解析、シーン検出 (オプション機能)
+- 用途: フレーム取得、シーク、プレビュー、書き出し処理
 - ライセンス全文: LICENSES/opencv-Apache-2.0.txt
 
-### 6. tkinterdnd2 - MIT License
+### 5. NumPy - BSD-3-Clause
 
-- Package: tkinterdnd2 >=0.3.0
-- Copyright: pmgagne, Eliav2 and contributors
-- Source: https://github.com/pmgagne/tkinterdnd2
-- 用途: 動画ファイルのドラッグ&ドロップ対応
-- ライセンス全文: LICENSES/tkinterdnd2-MIT.txt
+- Package: numpy >=1.24.0
+- Copyright: NumPy Developers
+- Source: https://github.com/numpy/numpy
+- 用途: 音声ミックス、波形データ処理の基盤
+- ライセンス全文: LICENSES/numpy-BSD-3-Clause.txt
 
-### 7. pyinstaller - GPL-2.0-only WITH Bootloader Exception
+### 6. Pygame - LGPL-2.1
 
-- Package: pyinstaller 6.x (ビルドツールのみ)
-- Copyright: PyInstaller Development Team
-- Source: https://github.com/pyinstaller/pyinstaller
-- 説明: ビルドツールとしてのみ使用。Bootloader Exceptionにより、生成されたバイナリにはGPLは感染しません。配布義務なし。
+- Package: pygame >=2.5.0
+- Copyright: Pygame Community
+- Source: https://github.com/pygame/pygame
+- 用途: プレビュー時の音声再生 (mixer)
+- ライセンス全文: LICENSES/pygame-LGPL-2.1.txt
+
+### 7. librosa - ISC License
+
+- Package: librosa >=0.10.0
+- Copyright: librosa development team
+- Source: https://github.com/librosa/librosa
+- 用途: 速度変更時のピッチ保持処理 (オプション機能)
+- ライセンス全文: LICENSES/librosa-ISC.txt
+- 依存ライブラリ: soundfile (LGPL-2.1/BSD), audioread (MIT), numba (BSD)
 
 ### 8. Python Standard Library - PSF-2.0
 
-- tkinter, pathlib, hashlib, json, os, sys, subprocess 等
+- tkinter, pathlib, hashlib, json, os, sys, subprocess, wave, tempfile, etc.
 - License: Python Software Foundation License 2.0
+- 用途: UI、ファイル操作、プロジェクト保存
 
 ---
 
@@ -79,8 +82,9 @@ VideoCutterStudio - Third Party Open Source Licenses
 
 ### 推奨 requirements.txt
 
-customtkinter>=5.2.0
 Pillow>=10.0
-imageio-ffmpeg>=0.4.9
 opencv-python>=4.8.0
-tkinterdnd2>=0.3.0
+numpy>=1.24.0
+pygame>=2.5.0
+imageio-ffmpeg>=0.4.9
+librosa>=0.10.0
