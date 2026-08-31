@@ -1,0 +1,18 @@
+# VideoCutterStudio - ローカルデータはGithubに上げない
+.video_cutter_studio/
+.video-cutter-studio/
+*.db
+*.enc
+*.key
+*.log
+*.bak
+__pycache__/
+dist/
+build/
+*.exe
+.venv/
+venv/
+*.tmp
+*.temp
+cut_temp/
+export_temp/
