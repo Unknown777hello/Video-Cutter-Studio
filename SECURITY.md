@@ -25,10 +25,8 @@ VideoCutterStudioはローカルでの動画処理に特化し、以下のセキ
 ## Reporting a Vulnerability
 
 脆弱性を発見した場合は、悪用を防ぐため公開Issueではなく、以下の方法でご報告ください。
-
-**連絡先:** https://github.com/Unknown777hello/Video-Cutter-Studio/issues
-
-報告時はタイトルに `[SECURITY]` を付けて作成してください。内容は自動的に制限付きで扱われます。
+https://github.com/Unknown777hello/Video-Cutter-Studio/issues
+報告時はタイトルに [SECURITY] を付けて作成してください。内容は自動的に制限付きで扱われます。
 
 - 48時間以内に確認し、受領の旨を返信します
 - 修正版がリリースされるまで、詳細の非公開にご協力ください
