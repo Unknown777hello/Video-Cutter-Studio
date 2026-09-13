@@ -56,7 +56,7 @@ Python版を使用する場合は、Pythonをインストールした環境で�
 ### 必要なライブラリ
 
 ```bash
-pip install pillow opencv-python numpy pygame imageio-ffmpeg librosa
+pillow opencv-python numpy pygame imageio-ffmpeg librosa
 ```
 
 ### 起動方法
