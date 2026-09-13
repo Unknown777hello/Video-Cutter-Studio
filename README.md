@@ -4,7 +4,7 @@ Windows向けのシンプルな動画編集デスクトップアプリです。
 
 インストーラー版は Python / Tkinter をベースに、PyInstaller + Inno Setup で配布しています。
 
-また、Python版のソースコードも公開しています。
+また、Python版のソースコードは、GitHub ReleasesのPython版ZIPに含まれています。
 
 ## 1. 動作環境
 
