@@ -76,8 +76,8 @@ VideoCutterStudio - Third Party Open Source Licenses
 
 ### 配布物への同梱について
 
-- インストーラー版: {app}\LICENSE.md, {app}\THIRD-PARTY-LICENSES.md, {app}\LICENSES\ フォルダを同梱
-- Python版: リポジトリ直下に LICENSE.md, THIRD-PARTY-LICENSES.md, LICENSES/ フォルダを同梱
+- インストーラー版: {app}\LICENSE.md, {app}\THIRD-PARTY-LICENSES.txt, {app}\LICENSES\ フォルダを同梱
+- Python版: リポジトリ直下に LICENSE.md, THIRD-PARTY-LICENSES.txt, LICENSES/ フォルダを同梱
 - FFmpegのライセンス条項に従い、LGPLライセンス本文とソースコードの入手方法を LICENSES/ フォルダに含めています。
 
 ### 推奨 requirements.txt
