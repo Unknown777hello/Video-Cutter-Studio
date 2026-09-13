@@ -2,19 +2,20 @@
 VideoCutterStudio - Third Party Open Source Licenses
 
 適用バージョン: v0.6 以降 (Tkinter版)
-最終更新: 2026-08-31 (v0.6)
+最終更新: 2026-09-13 (v0.6)
 ライセンス: VideoCutterStudio License (LICENSE.md)
 
 本ファイルは VideoCutterStudio が使用している第三者ライブラリ・バイナリのライセンス情報を記載しています。
 自作コードは独自ライセンスですが、以下のライブラリには各ライセンスが優先適用されます(LICENSE.md 第8条)。
 
-### 1. FFmpeg - LGPL-2.1-or-later / GPL-2.0-or-later (ビルドにより異なる)
+### 1. FFmpeg - LGPL-2.1-or-later
 
 - Binary: ffmpeg / ffprobe (imageio-ffmpeg経由のLGPLビルドを使用)
 - Copyright: FFmpeg team
 - Source: https://ffmpeg.org/
+- 本配布物では imageio-ffmpeg から提供される LGPL の FFmpeg バイナリを使用しています。
 - 用途: 動画のデコード、カット、エンコード、音声抽出の中核エンジン
-- 本配布物ではLGPLビルドを採用し、動的リンクとして利用しています。LGPLのソース開示義務に従い、ビルドに使用したFFmpegのソース取得方法をREADMEに記載しています。
+- LGPLのソース開示義務に従い、ビルドに使用したFFmpegのソース取得方法をREADMEに記載しています。
 - ライセンス全文: LICENSES/FFmpeg-LGPL-2.1.txt
 
 ### 2. Pillow (PIL Fork) - HPND
@@ -64,7 +65,7 @@ VideoCutterStudio - Third Party Open Source Licenses
 - Source: https://github.com/librosa/librosa
 - 用途: 速度変更時のピッチ保持処理 (オプション機能)
 - ライセンス全文: LICENSES/librosa-ISC.txt
-- 依存ライブラリ: soundfile (LGPL-2.1/BSD), audioread (MIT), numba (BSD)
+依存ライブラリ: soundfile (BSD-3-Clause), audioread (MIT), numba (BSD)
 
 ### 8. Python Standard Library - PSF-2.0
 
@@ -78,7 +79,6 @@ VideoCutterStudio - Third Party Open Source Licenses
 
 - インストーラー版: {app}\LICENSE.md, {app}\THIRD-PARTY-LICENSES.txt, {app}\LICENSES\ フォルダを同梱
 - Python版: リポジトリ直下に LICENSE.md, THIRD-PARTY-LICENSES.txt, LICENSES/ フォルダを同梱
-- FFmpegのライセンス条項に従い、LGPLライセンス本文とソースコードの入手方法を LICENSES/ フォルダに含めています。
 
 ### 推奨 requirements.txt
 
