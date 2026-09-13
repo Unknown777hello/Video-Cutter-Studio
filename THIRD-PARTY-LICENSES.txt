@@ -65,7 +65,7 @@ VideoCutterStudio - Third Party Open Source Licenses
 - Source: https://github.com/librosa/librosa
 - 用途: 速度変更時のピッチ保持処理 (オプション機能)
 - ライセンス全文: LICENSES/librosa-ISC.txt
-依存ライブラリ: soundfile (BSD-3-Clause), audioread (MIT), numba (BSD)
+依存ライブラリ: soundfile (BSD-3-Clause), audioread (MIT), numba (BSD-2-Clause)
 
 ### 8. Python Standard Library - PSF-2.0
 
