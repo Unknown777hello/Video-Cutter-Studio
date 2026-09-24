@@ -1,4 +1,4 @@
-# Video Cutter Studio v0.6.0
+# Video Cutter Studio v0.7
 
 Windows向けのシンプルな動画編集デスクトップアプリです。
 
